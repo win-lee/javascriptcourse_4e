@@ -212,8 +212,8 @@
     <div class="logo">JS</div>
     <h1>Hallo <span>JavaScript-Entwickler:in</span>! 👋</h1>
     <p>Hier lernst du Schritt für Schritt, wie du mit JavaScript eigene Programme schreibst –
-       geschrieben in VS Code, gestartet im Terminal mit Node.js. Klicke auf ein Thema, um loszulegen!</p>
-    <span class="badge">💻 VS Code + Node.js &nbsp;•&nbsp; Unterrichtsdateien 01–10</span>
+       geschrieben in VS Code, gestartet mit Code Runner. Klicke auf ein Thema, um loszulegen!</p>
+    <span class="badge">💻 VS Code + Code Runner &nbsp;•&nbsp; Unterrichtsdateien 01–10</span>
   </div>
 </header>
 
@@ -222,8 +222,9 @@
   <p class="intro-text">
     JavaScript läuft überall: im <strong>Browser</strong> und – wie bei uns im Unterricht – direkt
     auf deinem PC über <strong>Node.js</strong>. Du schreibst den Code in <strong>VS Code</strong>
-    in Dateien wie <code>01_hello.js</code> und startest ihn im Terminal mit
-    <code>node dateiname.js</code>. Die Themen hier folgen genau unseren Unterrichtsdateien
+    in Dateien wie <code>01_hello.js</code> und startest ihn mit der Erweiterung
+    <strong>Code Runner</strong> (▶-Button oben rechts oder Rechtsklick → „Run Code“).
+    Die Themen hier folgen genau unseren Unterrichtsdateien
     <code>01_hello.js</code> bis <code>10_while-mit-frage.js</code> – schau sie dir parallel an!
   </p>
 
@@ -236,7 +237,7 @@
     </button>
     <div class="topic-body">
       <p>Dein erstes Programm! Mit <code>console.log()</code> schreibst du Text in das Terminal –
-         das JavaScript-Pendant zu <code>echo</code> in PHP.</p>
+         dein wichtigstes Werkzeug für Ausgaben.</p>
 
       <div class="code-window">
         <div class="code-title"><span class="dots"><i></i><i></i><i></i></span> 01_hello.js</div>
@@ -253,7 +254,7 @@ ein Kommmentar (geht auch mehrzeilig)
       </div>
 
       <div class="code-window">
-        <div class="code-title terminal"><span class="dots"><i></i><i></i><i></i></span> 💻 Terminal – node 01_hello.js</div>
+        <div class="code-title terminal"><span class="dots"><i></i><i></i><i></i></span> 💻 Terminal – 01_hello.js</div>
 <pre><span class="out">Hello World!
 Blabla...</span></pre>
       </div>
@@ -262,7 +263,7 @@ Blabla...</span></pre>
       <ul>
         <li><code>console.log("Text")</code> gibt Text im Terminal aus</li>
         <li><code>//</code> für einzeilige Kommentare, <code>/* ... */</code> für mehrzeilige – der Computer ignoriert sie</li>
-        <li>Gestartet wird das Programm im Terminal mit <code>node 01_hello.js</code></li>
+        <li>Gestartet wird das Programm mit <strong>Code Runner</strong> in VS Code (▶-Button oder Rechtsklick → „Run Code“)</li>
       </ul>
 
       <div class="merke"><b>Merke dir:</b> In JavaScript sind Semikolons am Zeilenende
@@ -315,8 +316,8 @@ Blabla...</span></pre>
       <ul>
         <li><code>let x = 5</code> erstellt die Variable – <strong>später</strong> reicht <code>x = 10</code> (ohne let!)</li>
         <li><code>x++</code> addiert genau 1 – die Kurzform von <code>x = x + 1</code></li>
-        <li>Text und Variablen hängst du mit <strong><code>+</code></strong> zusammen: <code>"Wert: "+zahl</code> (in PHP war das der Punkt!)</li>
-        <li>Die Datentypen kennst du schon aus PHP: integer, float, string, boolean</li>
+        <li>Text und Variablen hängst du mit <strong><code>+</code></strong> zusammen: <code>"Wert: "+zahl</code></li>
+        <li>Die Datentypen: integer, float, string, boolean</li>
       </ul>
 
       <div class="achtung"><b>Achtung:</b> Schreibst du <code>let x = ...</code> zweimal,
@@ -360,7 +361,7 @@ Blabla...</span></pre>
       </div>
 
       <div class="code-window">
-        <div class="code-title terminal"><span class="dots"><i></i><i></i><i></i></span> 💻 Terminal – node 03_eingabe.js</div>
+        <div class="code-title terminal"><span class="dots"><i></i><i></i><i></i></span> 💻 Terminal – 03_eingabe.js</div>
 <pre><span class="out">Wie heißt du: Kim
 Servas Kim
 Wie alt bist du: 17
@@ -426,7 +427,7 @@ In 10 Jahren bist du 27</span></pre>
       <h3>🔍 Was du hier lernst</h3>
       <ul>
         <li>JavaScript prüft <strong>von oben nach unten</strong> – die erste wahre Bedingung gewinnt, der Rest wird übersprungen</li>
-        <li><code>==</code> vergleicht auf Gleichheit, <code>&lt;</code>, <code>&gt;=</code> usw. kennst du schon aus PHP</li>
+        <li><code>==</code> vergleicht auf Gleichheit, <code>&lt;</code>, <code>&gt;=</code> usw. vergleichen Zahlen und Text</li>
         <li><code>else</code> greift, wenn keine Bedingung stimmt</li>
       </ul>
 
@@ -488,8 +489,8 @@ In 10 Jahren bist du 27</span></pre>
         <li><code>!=</code> heißt „nicht gleich“ – das Gegenteil von <code>==</code></li>
       </ul>
 
-      <div class="merke"><b>Merke dir:</b> <code>&amp;&amp;</code> und <code>||</code> kennst du
-        schon aus PHP – in JavaScript funktionieren sie <b>exakt gleich</b>. Auch hier gilt:
+      <div class="merke"><b>Merke dir:</b> <code>&amp;&amp;</code> verlangt, dass <b>beide</b>
+        Bedingungen wahr sind, bei <code>||</code> reicht <b>eine</b>. Auch hier gilt:
         erst die engste Bedingung prüfen, dann weiter auffächern.</div>
 
       <div class="aufgabe"><b>✏️ Deine Aufgabe:</b> Baue eine Alters-UND-Wohnort-Abfrage:
@@ -530,7 +531,7 @@ In 10 Jahren bist du 27</span></pre>
       </div>
 
       <div class="code-window">
-        <div class="code-title terminal"><span class="dots"><i></i><i></i><i></i></span> 💻 Terminal – node 06_zahlen-formatieren.js</div>
+        <div class="code-title terminal"><span class="dots"><i></i><i></i><i></i></span> 💻 Terminal – 06_zahlen-formatieren.js</div>
 <pre><span class="out">15.44
 15
 16
@@ -603,7 +604,7 @@ In 10 Jahren bist du 27</span></pre>
     </button>
     <div class="topic-body">
       <p>Etwas 10-mal wiederholen? Dafür gibt es die <strong>for-Schleife</strong> –
-         mit denselben drei Parametern, die du schon aus PHP kennst.</p>
+         definiert über drei Parameter.</p>
 
       <div class="code-window">
         <div class="code-title"><span class="dots"><i></i><i></i><i></i></span> 08_for-schleife.js</div>
@@ -620,7 +621,7 @@ In 10 Jahren bist du 27</span></pre>
       </div>
 
       <div class="code-window">
-        <div class="code-title terminal"><span class="dots"><i></i><i></i><i></i></span> 💻 Terminal – node 08_for-schleife.js</div>
+        <div class="code-title terminal"><span class="dots"><i></i><i></i><i></i></span> 💻 Terminal – 08_for-schleife.js</div>
 <pre><span class="out">FOR Schleife 1
 FOR Schleife 2
 ...
@@ -634,8 +635,8 @@ FOR Schleife 10</span></pre>
         <li><strong>Schrittweite:</strong> <code>i++</code> – erhöht i nach jedem Durchlauf um 1</li>
       </ul>
 
-      <div class="merke"><b>Merke dir:</b> Genau wie in PHP! Einziger Unterschied: die Variable
-        i wird hier nicht mit <code>let</code> deklariert. Sauberer wäre <code>let i=1</code> –
+      <div class="merke"><b>Merke dir:</b> Einzige Besonderheit: die Variable i wird hier
+        ohne <code>let</code> deklariert. Sauberer wäre <code>let i=1</code> –
         beide Varianten funktionieren in unseren Programmen.</div>
 
       <div class="aufgabe"><b>✏️ Deine Aufgabe:</b> Zähle von 1 bis 20 – und dann rückwärts
@@ -709,7 +710,7 @@ FOR Schleife 10</span></pre>
       </div>
 
       <div class="code-window">
-        <div class="code-title terminal"><span class="dots"><i></i><i></i><i></i></span> 💻 Terminal – node 10_while-mit-frage.js</div>
+        <div class="code-title terminal"><span class="dots"><i></i><i></i><i></i></span> 💻 Terminal – 10_while-mit-frage.js</div>
 <pre><span class="out">Hallo, ich bin ein Pseudo Programm
 Willst du noch mal starten? (ja/nein): ja
 Hallo, ich bin ein Pseudo Programm
@@ -737,7 +738,7 @@ Willst du noch mal starten? (ja/nein): nein</span></pre>
 
   <table class="cheat-table">
     <tr><th>Syntax</th><th>Bedeutung</th></tr>
-    <tr><td><code>node datei.js</code></td><td>Programm im Terminal starten</td></tr>
+    <tr><td><code>Code Runner</code> (▶ in VS Code)</td><td>Programm starten (Rechtsklick → „Run Code“)</td></tr>
     <tr><td><code>console.log("Text")</code></td><td>Ausgabe im Terminal</td></tr>
     <tr><td><code>//</code> bzw. <code>/* ... */</code></td><td>Einzeiliger / mehrzeiliger Kommentar</td></tr>
     <tr><td><code>let x = 5</code></td><td>Variable erstellen (nur beim 1. Mal mit let!)</td></tr>
@@ -759,7 +760,7 @@ Willst du noch mal starten? (ja/nein): nein</span></pre>
   <!-- ============ ÜBUNGSAUFGABEN ============ -->
   <h2 class="section-title">🏋️ Übungs-Aufgaben</h2>
   <p class="section-sub">Die Aufgaben aus dem Unterricht – probiere sie erst selbst, bevor du die Lösung aufklappst!
-     Die Dateien baust du in VS Code auf und startest sie mit <code>node dateiname.js</code>.</p>
+     Die Dateien baust du in VS Code auf und startest sie mit <strong>Code Runner</strong>.</p>
 
   <!-- UE-00: rechner1 -->
   <section class="topic">
@@ -1081,7 +1082,7 @@ Korrektes Ergebnis: 8                Korrektes Ergebnis: 22</span></pre>
          ausgibt und bei jeder Zahl angibt, ob sie positiv oder negativ oder gleich 0 ist.</p>
       <div class="merke"><b>Tipp:</b> Schleife von -10 bis 10 (<b>Lektion 08</b>) – und im
          Schleifenkörper eine if/else-if/else-Kette (<b>Lektion 04</b>).
-        Genau wie beim PHP-Kurs: <strong>Schleife + Abfrage kombinieren!</strong></div>
+        Hier kombinierst du zum ersten Mal <strong>Schleife + Abfrage</strong>!</div>
       <button class="solution-btn" onclick="toggleSolution(this)">💡 Lösung anzeigen</button>
       <div class="solution"><div class="code-window">
         <div class="code-title"><span class="dots"><i></i><i></i><i></i></span> zahlenfolge_1.js – Kernidee</div>
@@ -1202,8 +1203,8 @@ Korrektes Ergebnis: 8                Korrektes Ergebnis: 22</span></pre>
 </main>
 
 <footer>
-  Erstellt für den Informatik-Unterricht • Geschrieben in VS Code, gestartet mit <code>node datei.js</code> 😉<br>
-  Tipp: Neue Datei in VS Code (<code>Strg+N</code>) → speichern als <code>.js</code> → im Terminal starten
+  Erstellt für den Informatik-Unterricht • Geschrieben in VS Code, gestartet mit <strong>Code Runner</strong> 😉<br>
+  Tipp: Neue Datei in VS Code (<code>Strg+N</code>) → speichern als <code>.js</code> → ▶-Button (Run Code)
 </footer>
 
 <script>
@@ -1224,20 +1225,20 @@ const questions = [
     q: "Womit gibst du in JavaScript Text im Terminal aus?",
     answers: ["echo", "console.log()", "print()", "System.out.println()"],
     correct: 1,
-    explain: "console.log(\"Text\") schreibt in das Terminal – echo ist PHP, print ist Python."
+    explain: "console.log(\"Text\") schreibt den Text in das Terminal – deine wichtigste Ausgabe-Funktion."
   },
   {
     q: "Wie erstellst du eine Variable in JavaScript?",
     answers: ["$name = \"Fritz\"", "let name = \"Fritz\"", "name := \"Fritz\"", "var name := \"Fritz\""],
     correct: 1,
-    explain: "let erstellt die Variable beim ersten Mal. Das $-Zeichen kennst du aus PHP – in JavaScript gibt es das nicht!"
+    explain: "let erstellt die Variable beim ersten Mal – in JavaScript gibt es kein $-Zeichen für Variablennamen."
   },
   {
     q: "Was gibt dieser Code aus?",
     code: 'let name = "Kim"\nconsole.log("Servas "+name)',
     answers: ["Servas name", "Servas Kim", "Servas + Kim", "Eine Fehlermeldung"],
     correct: 1,
-    explain: "Mit + hängst du Text und Variable zusammen: \"Servas Kim\". (In PHP war das der Punkt .)"
+    explain: "Mit + hängst du Text und Variable zusammen: \"Servas Kim\"."
   },
   {
     q: "Warum braucht man bei Zahleneingaben Number()?",

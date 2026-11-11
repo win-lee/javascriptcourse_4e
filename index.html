@@ -1229,65 +1229,65 @@ const questions = [
   },
   {
     q: "Wie erstellst du eine Variable in JavaScript?",
-    answers: ["$name = \"Fritz\"", "let name = \"Fritz\"", "name := \"Fritz\"", "var name := \"Fritz\""],
-    correct: 1,
+    answers: ["let name = \"Fritz\"", "$name = \"Fritz\"", "name := \"Fritz\"", "var name := \"Fritz\""],
+    correct: 0,
     explain: "let erstellt die Variable beim ersten Mal – in JavaScript gibt es kein $-Zeichen für Variablennamen."
   },
   {
     q: "Was gibt dieser Code aus?",
-    code: 'let name = "Kim"\nconsole.log("Servas "+name)',
-    answers: ["Servas name", "Servas Kim", "Servas + Kim", "Eine Fehlermeldung"],
-    correct: 1,
+    code: "let name = \"Kim\"\nconsole.log(\"Servas \"+name)",
+    answers: ["Servas Kim", "Servas name", "Servas + Kim", "Eine Fehlermeldung"],
+    correct: 0,
     explain: "Mit + hängst du Text und Variable zusammen: \"Servas Kim\"."
   },
   {
     q: "Warum braucht man bei Zahleneingaben Number()?",
-    answers: ["Damit die Zahl schöner aussieht", "Weil prompt immer einen String liefert", "Damit das Programm schneller läuft", "Number() ist optional und unnötig"],
-    correct: 1,
+    answers: ["Damit die Zahl schöner aussieht", "Damit das Programm schneller läuft", "Weil prompt immer einen String liefert", "Number() ist optional und unnötig"],
+    correct: 2,
     explain: "prompt liefert IMMER einen String, z.B. \"17\". Erst Number() macht die echte Zahl 17 daraus, mit der man rechnen kann."
   },
   {
     q: "Was gibt console.log(x) aus?",
-    code: 'let x = 5\nx++\nx = x + 3\nconsole.log(x)',
+    code: "let x = 5\nx++\nx = x + 3\nconsole.log(x)",
     answers: ["5", "6", "8", "9"],
     correct: 3,
     explain: "x++ macht aus 5 eine 6, dann x+3 ergibt 9. x++ ist die Kurzform von x = x + 1."
   },
   {
     q: "Was gibt 04_abfrage.js aus, wenn man 20 eingibt?",
-    code: 'if (alter < 18) {\n    console.log("Heute leider nicht...")\n}\nelse if (alter == 20) {\n    console.log("Special Drink inklusive.")\n}\nelse if (alter >= 100) {\n    console.log("Du bist zu alt :-(")\n}\nelse {\n    console.log("Viel Spaß!!")\n}',
-    answers: ["Heute leider nicht...", "Special Drink inklusive.", "Du bist zu alt :-(", "Viel Spaß!!"],
-    correct: 1,
+    code: "if (alter < 18) {\n    console.log(\"Heute leider nicht...\")\n}\nelse if (alter == 20) {\n    console.log(\"Special Drink inklusive.\")\n}\nelse if (alter >= 100) {\n    console.log(\"Du bist zu alt :-(\")\n}\nelse {\n    console.log(\"Viel Spaß!!\")\n}",
+    answers: ["Special Drink inklusive.", "Heute leider nicht...", "Du bist zu alt :-(", "Viel Spaß!!"],
+    correct: 0,
     explain: "20 < 18 ist falsch, 20 == 20 ist wahr → Special Drink! Die erste wahre Bedingung gewinnt, der Rest wird übersprungen."
   },
   {
     q: "Was bedeutet && in einer Bedingung?",
-    answers: ["ODER – mindestens eine Bedingung muss wahr sein", "UND – beide Bedingungen müssen wahr sein", "NICHT – kehrt das Ergebnis um", "Addition zweier Zahlen"],
-    correct: 1,
+    answers: ["UND – beide Bedingungen müssen wahr sein", "ODER – mindestens eine Bedingung muss wahr sein", "NICHT – kehrt das Ergebnis um", "Addition zweier Zahlen"],
+    correct: 0,
     explain: "&& (UND) verlangt, dass BEIDE Bedingungen wahr sind – wie beim Login: username == \"admin\" UND pw == \"1234\". || wäre ODER."
   },
   {
     q: "Was gibt dieser Code aus?",
-    code: 'let zahl = 15.7\nconsole.log(Math.floor(zahl))',
+    code: "let zahl = 15.7\nconsole.log(Math.floor(zahl))",
     answers: ["16", "15", "15.7", "15.5"],
     correct: 1,
     explain: "Math.floor() rundet immer ab → 15. Math.ceil() würde aufrunden (16), Math.round() kaufmännisch (16)."
   },
   {
     q: "Was macht toFixed(2) mit der Zahl 17.7834?",
-    answers: ["Rechnet sie mal 2", "Formatiert sie auf 2 Nachkommastellen: 17.78", "Rundet auf eine ganze Zahl: 18", "Verdoppelt die Zahl"],
-    correct: 1,
+    answers: ["Rechnet sie mal 2", "Rundet auf eine ganze Zahl: 18", "Verdoppelt die Zahl", "Formatiert sie auf 2 Nachkommastellen: 17.78"],
+    correct: 3,
     explain: "toFixed(2) liefert genau 2 Nachkommastellen – perfekt für Preise. Aus 17.780000000000001 wird so 17.78."
   },
   {
     q: "Was liefert Math.floor(Math.random()*10)+1?",
-    answers: ["Eine Zufallszahl zwischen 0 und 1", "Eine Kommazahl zwischen 1 und 10", "Eine ganze Zufallszahl zwischen 1 und 10", "Immer 10"],
-    correct: 2,
+    answers: ["Eine Zufallszahl zwischen 0 und 1", "Eine Kommazahl zwischen 1 und 10", "Immer 10", "Eine ganze Zufallszahl zwischen 1 und 10"],
+    correct: 3,
     explain: "Das Muster aus Lektion 07: *10 → 0 bis 9.99, Math.floor() → 0 bis 9, +1 → 1 bis 10."
   },
   {
     q: "Wie oft läuft diese Schleife?",
-    code: 'for (i=1; i<=10; i++) {\n    console.log("FOR Schleife "+i)\n}',
+    code: "for (i=1; i<=10; i++) {\n    console.log(\"FOR Schleife \"+i)\n}",
     answers: ["9-mal", "10-mal", "11-mal", "Unendlich oft"],
     correct: 1,
     explain: "Sie startet bei 1 und läuft, solange i <= 10 ist – also genau 10 Durchläufe."
@@ -1300,15 +1300,15 @@ const questions = [
   },
   {
     q: "Wann endet diese Schleife?",
-    code: 'let weiter = "ja"\nwhile (weiter == "ja") {\n    console.log("Hallo")\n    weiter = prompt("Nochmal? (ja/nein): ")\n}',
+    code: "let weiter = \"ja\"\nwhile (weiter == \"ja\") {\n    console.log(\"Hallo\")\n    weiter = prompt(\"Nochmal? (ja/nein): \")\n}",
     answers: ["Nach 10 Durchläufen", "Sobald der Benutzer etwas anderes als \"ja\" eingibt", "Nie – sie läuft endlos", "Nach dem ersten Durchlauf"],
     correct: 1,
     explain: "Das „Nochmal?“-Muster aus Lektion 10: Die Schleife läuft, solange weiter == \"ja\" ist – die Eingabe von \"nein\" beendet sie."
   },
   {
     q: "Was musst du tun, bevor du prompt() in einer neuen Node.js-Datei verwenden kannst?",
-    answers: ["Nichts, prompt gehört zu JavaScript", "npm install prompt-sync im Projektordner", "Node.js neu installieren", "VS Code neu starten"],
-    correct: 1,
+    answers: ["Nichts, prompt gehört zu JavaScript", "Node.js neu installieren", "npm install prompt-sync im Projektordner", "VS Code neu starten"],
+    correct: 2,
     explain: "prompt-sync ist eine externe Bibliothek: einmal pro Projekt mit npm install prompt-sync installieren – dann klappt const prompt = require(\"prompt-sync\")()."
   }
 ];
